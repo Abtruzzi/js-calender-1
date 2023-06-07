@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+    <header class="siteHeader">
+        <h1>我的日历</h1>
+    </header>
+    <div class="calender">
+        <div class="calender-header">
+            <time id="time"></time>
+        </div>
+        <ol class="calender-weekdays">
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+            <li>日</li>
+        </ol>
+        <ol class="calender-days" id="days">
+        </ol>
+        <div class="calender-actions">
+            <div class="calender-actions-left">
+                <button id="today">今天</button>
+            </div>
+            <div class="calender-actions-right">
+                <button id="lastMonth">上一月</button>
+                <button id="nextMonth">下一月</button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
