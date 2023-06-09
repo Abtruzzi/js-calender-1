@@ -1,5 +1,4 @@
 
-
 let currentTime = new Date()
 render(currentTime)
 
@@ -73,9 +72,22 @@ function render(time) {
                 }
                 li.classList.add('calender-days-select')
                 selectLi = li
+                if (events) {
+                    g('#events').innerHTML = events.toString()
+                } else {
+                    g('#events').innerHTML = '无'
+                }
+                g('#event').innerHTML = ''
+            }
+            const key = `${year}-${month}-${i}`
+            const events = window.data[key]
+            console.log(key, events)
+            if (events) {
+                li.classList.add('calender-days-hasEvents')
             }
             days.append(li)
             n += 1
+
         }
         let i = 月末星期几 + 1
         for (let j = 0; j < 42 - n; j++) {
